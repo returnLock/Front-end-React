@@ -10,6 +10,13 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
+let btn = document.getElementById('btn')
+btn.addEventListener('click', ()=>{
+  window.location.replace("https://github.com/Luan16p");
+})
+
+
+console.clear();
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

@@ -1,38 +1,217 @@
-.App {
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: rgb(87, 68, 141);
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: rgb(212, 212, 212);
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+.nav-bar {
+  display: flex;
+  justify-content: space-around;
+  height: 8vh;
+  align-items: center;
+  font-family: sans-serif;
+}
+.logo {
+  font-size: 24px;
+  letter-spacing: 3px;
+}
+.list {
+  display: flex;
+  list-style:none;
+}
+.list li {
+  margin: 25px;
+}
+.list a:hover {
+  opacity: 0.7;
+  text-decoration: underline;
+}
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+}
+.mobile-menu div {
+  height: 2px;
+  margin: 8px;
+  width: 30px;
+  background: #fff;
+}
+.jdx-first {
+  height: 100vh;
+  background: url(../src/bg-cool.jpg) no-repeat center center;
+  background-size: cover;
+  position: relative;
+}
+.box {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  max-width: 700px;
+}
+.box h2 {
+  font-size: 35px;
+  font-family: sans-serif;
+  font-weight: 300;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.box a {
+    text-decoration: underline;
 }
+.box button {
+  margin-top: 30px;
+  padding: 15px;
+  width: 100%;
+  border: 2px solid rgb(87, 68, 141);
+  background: rgb(87, 68, 141);
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 2px 3px 5px #23252c;
+  transition: 0.2s ease-in;
+  border-radius: 40px;
+  text-transform: capitalize;
+}
+.box button:hover {
+  background: #fff;
+  color: rgb(87, 68, 141);
+}
+.bxt h2 {
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  cursor: pointer;
+  transform: translateY(0px);
+  animation: SeeFloat 2s ease-in-out infinite;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+}
+.jdx-pageDown {
+  height: 50vh;
+  background: #1a1a1a;
+  color: #fff;
+  font-family: sans-serif;
+  position: relative;
+
+}
+.about h2 {
+  font-size: 40px;
+  font-weight: 400;
+}
+.about {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.about p {
+  margin: 20px 0;
+  font-size: 25px;
+  text-align: none;
+}
+.contact {
+  height: 50vh;
+  background: #fff;
+  position: relative;
+}
+form {
+  max-width: 1395px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+form input[type=email] {
+  width: 350px;
+  height: 5vh;
+  border: 1px solid #1a1a1a;
+  outline: 0;
+  padding-left: 10px;
+}
+form input[type=submit] {
+  width: 100px;
+  height: 5vh;
+  background: #1a1a1a;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+}
+footer {
+  height: 20vh;
+  background: rgb(61, 61, 61);
+  position: relative;
+}
+footer h4 {
+  color: #fff;
+  position: absolute;
+  font-family: sans-serif;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 15px !important;
+
+}
+@keyframes SeeFloat {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media screen and (max-width: 777px) {
+  .mobile-menu {display: block;}
+  .list {display: none;}
+  
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 999px) {
+  .about h2 {
+    font-size:20px;
   }
-  to {
-    transform: rotate(360deg);
+  .about p {
+    font-size: 15px;
+  }
+  form {
+    max-width: 999px;
+  }
+  form input[type=email] {
+    width: 450px;
+  }
+  form input[type=submit] {
+    width: 100%;
+    margin: 10px 0;
+  }
+  footer h4 {
+    font-size: 10px
+  }
+  .box h2 {
+    font-size: 25px;
+  }
+  .box button {
+    padding: 15px;
+    width: 100%;
   }
 }
